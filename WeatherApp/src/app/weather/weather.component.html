@@ -1,0 +1,557 @@
+
+
+
+<div class="bg">
+    <div class="container">
+
+        <!-- Header -->
+        <div class="text">
+            <h2><img src="../assets/sun and cloud.png" alt="" width="5%" height="5%"> Weather App</h2>
+            <br>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-5">
+                        <div class="d-flex flex-nowrap text-center shadow-sm">
+                            <!-- <input type="text" class="form-control mr-0 bg-dark text-white" placeholder="Enter a city" style="width: 450px; height: 35px; color:black; border-radius:7px;"> -->
+                            <input type="text" class="form-control mr-0 bg-dark text-white" placeholder="Enter a city" style="width: 450px; height: 35px; color:black; border-radius:7px;">
+                            <button class="btn btn-purple">Add City</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- 
+        <h1>{{temperature}} </h1> -->
+    
+        <!--Start of the Row-1 -->
+        <div class="row custom-padding">
+
+            <!-- Card-1 -->
+            <div class="col-md-6">
+                <div class="card custom-bg-card bg-dark text-white">
+                    <div class="card-header close1">
+                        <button type="button" class="close" data-dismiss="card" aria-label="Close" style="color: white;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <a routerLink="/first" class="text-decoration-none">
+                    <div class="card-body1 text-white">
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <h6 class="city-name pt-0">{{name1}} , {{country1}}</h6>
+                                <p class="time">{{dateTime | date: 'HH:mm'}}, {{dateTime | date:'MMM d'}}</p>
+                                <p class="status" style="line-height: 0;"><b><img src="https://openweathermap.org/img/wn/{{icon1}}@2x.png" width="30%" height="30%"></b> {{description1}}</p>
+                            </div>
+                            <div class="col-md-6 temperature1">
+                                <h1 class="temp"> {{temperature1}}°C </h1>
+                                <p class="min-temp mb-0">Temp Min: {{min_temp1}}°C</p>
+                                <p class="max-temp mb-0">Temp Max: {{max_temp1}}°C</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-ft">
+                        <div class="row">
+                            <div class="col-md-4 border-secondary sec1">
+                                <div class="ft justify-content-center align-items-center">
+                                    <p class="mb-1">Pressure: {{pressure1}}hPa</p>
+                                    <p class="mb-1">Humidity: {{humidity1}}%</p>
+                                    <p class="mb-1">Visibility: {{visibility1}}km</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 border-secondary sec2">
+                                <div class="ft justify-content-center align-items-center">
+                                    <div class="container">
+                                        <div class="row justify-content-center align-items-center">
+                                            <div class="col-auto">
+                                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46.64 46.64" width="25" height="25" class="p-100">
+                                                    <defs>
+                                                    <style>.cls-1{fill:#fff;}</style>
+                                                    </defs>
+                                                    <title>arrow head</title>
+                                                    <path class="cls-1" d="M24.76,45.64l-.37,0A3.33,3.33,0,0,1,21.46,43L18.13,28.48,3.59,25.15a3.37,3.37,0,0,1-.66-6.35L40.87,1.26a3.37,3.37,0,0,1,4.48,4.48L27.81,43.68A3.32,3.32,0,0,1,24.76,45.64Zm-19-23.92,13.5,3.09a3.39,3.39,0,0,1,2.54,2.54l3.09,13.5L41.35,5.26Zm36.72-17h0Z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="mb-0">{{speed1}}m/s {{degree1}} Degree</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 sec3">
+                                <div class="ft justify-content-center align-items-center">
+                                    <p class="mb-1">Sunrise: {{sunrise1 | date:'H:mm'}}</p>
+                                    <p class="mb-1">Sunset: {{sunset1 | date:'H:mm'}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card-2 -->
+            <div class="col-md-6">
+                <div class="card custom-bg-card shadow-sm bg-dark rounded text-white">
+                    <div class="card-header shadow-sm close2">
+                        <button type="button" class="close" data-dismiss="card" aria-label="Close" style="color: white;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <a routerLink="/second" class="card-link text-decoration-none" >
+                    <div class="card-body2 text-white">
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <h6 class="city-name"> {{name2}} , {{country2}} </h6>
+                                <p class="time">{{dateTime | date: 'HH:mm'}}, {{dateTime | date:'MMM d'}}</p>
+                                <p class="status" style="line-height: 0;"><b><img src="https://openweathermap.org/img/wn/{{icon2}}@2x.png" width="30%" height="30%"></b> {{description2}}</p>
+                            </div>
+                            <div class="col-md-6 temperature1">
+                                <h1 class="temp"> {{temperature2}}°C </h1>
+                                <p class="min-temp mb-0">Temp Min: {{min_temp2}}°C</p>
+                                <p class="max-temp mb-0">Temp Max: {{max_temp2}}°C</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-ft">
+                        <div class="row">
+                            <div class="col-md-4  border-secondary sec1">
+                                <div class="ft  justify-content-center align-items-center">
+                                    <p class="mb-1">Pressure: {{pressure2}}hPa</p>
+                                    <p class="mb-1">Humidity: {{humidity2}}%</p>
+                                    <p class="mb-1">Visibility: {{visibility2}}km</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4  border-secondary sec2">
+                                <div class="ft justify-content-center align-items-center">
+                                    <div class="container">
+                                        <div class="row justify-content-center align-items-center">
+                                            <div class="col-auto">
+                                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46.64 46.64" width="25" height="25" class="p-100">
+                                                    <defs>
+                                                    <style>.cls-1{fill:#fff;}</style>
+                                                    </defs>
+                                                    <title>arrow head</title>
+                                                    <path class="cls-1" d="M24.76,45.64l-.37,0A3.33,3.33,0,0,1,21.46,43L18.13,28.48,3.59,25.15a3.37,3.37,0,0,1-.66-6.35L40.87,1.26a3.37,3.37,0,0,1,4.48,4.48L27.81,43.68A3.32,3.32,0,0,1,24.76,45.64Zm-19-23.92,13.5,3.09a3.39,3.39,0,0,1,2.54,2.54l3.09,13.5L41.35,5.26Zm36.72-17h0Z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="mb-1">{{speed2}}m/s {{degree2}} Degree</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 sec3">
+                                <div class="ft justify-content-center align-items-center">
+                                    <p class="mb-1">Sunrise: {{sunrise2 | date:'H:mm'}}</p>
+                                    <p class="mb-1">Sunset: {{sunset2 | date:'H:mm'}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- End of the Row-1 -->
+        <br>
+
+        <!-- Start of the Row-2 -->
+        <div class="row custom-padding">
+
+            <!-- Card-3 -->
+            <div class="col-md-6">
+                <div class="card custom-bg-card shadow-sm bg-dark rounded text-white">
+                    <div class="card-header shadow-sm close3">
+                        <button type="button" class="close" data-dismiss="card" aria-label="Close" style="color: white;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <a routerLink="/third" class="card-link text-decoration-none">
+                    <div class="card-body3 text-white">
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <h6 class="city-name"> {{name3}} , {{country3}} </h6>
+                                <p class="time">{{dateTime | date: 'HH:mm'}}, {{dateTime | date:'MMM d'}}</p>
+                                <p class="status" style="line-height: 0;"><b><img src="https://openweathermap.org/img/wn/{{icon3}}@2x.png" width="30%" height="30%"></b> {{description3}}</p>
+                            </div>
+                            <div class="col-md-6 temperature1">
+                                <h1 class="temp"> {{temperature3}}°C </h1>
+                                <p class="min-temp mb-0">Temp Min: {{min_temp3}}°C</p>
+                                <p class="max-temp mb-0">Temp Max: {{max_temp3}}°C</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-ft">
+                        <div class="row">
+                            <div class="col-md-4  border-secondary sec1">
+                                <div class="ft justify-content-center align-items-center">
+                                    <p class="mb-1">Pressure: {{pressure3}}hPa</p>
+                                    <p class="mb-1">Humidity: {{humidity3}}%</p>
+                                    <p class="mb-1">Visibility: {{visibility3}}km</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4  border-secondary sec2">
+                                <div class="ft justify-content-center align-items-center">
+                                    <div class="container">
+                                        <div class="row justify-content-center align-items-center">
+                                            <div class="col-auto">
+                                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46.64 46.64" width="25" height="25" class="p-100">
+                                                    <defs>
+                                                    <style>.cls-1{fill:#fff;}</style>
+                                                    </defs>
+                                                    <title>arrow head</title>
+                                                    <path class="cls-1" d="M24.76,45.64l-.37,0A3.33,3.33,0,0,1,21.46,43L18.13,28.48,3.59,25.15a3.37,3.37,0,0,1-.66-6.35L40.87,1.26a3.37,3.37,0,0,1,4.48,4.48L27.81,43.68A3.32,3.32,0,0,1,24.76,45.64Zm-19-23.92,13.5,3.09a3.39,3.39,0,0,1,2.54,2.54l3.09,13.5L41.35,5.26Zm36.72-17h0Z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="mb-0">{{speed3}}m/s {{degree3}} Degree</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 sec3">
+                                <div class="ft justify-content-center align-items-center">
+                                    <p class="mb-1">Sunrise: {{sunrise3 | date:'H:mm'}}</p>
+                                    <p class="mb-1">Sunset: {{sunset3 | date:'H:mm'}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card-4 -->
+            <div class="col-md-6">
+                <div class="card custom-bg-card shadow-sm bg-dark rounded text-white">
+                    <div class="card-header shadow-sm close4">
+                        <button type="button" class="close" data-dismiss="card" aria-label="Close" style="color: white;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <a routerLink="/fourth" class="card-link text-decoration-none">
+                    <div class="card-body4 text-white">
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <h6 class="city-name"> {{name4}} , {{country4}} </h6>
+                                <p class="time">{{dateTime | date: 'HH:mm'}}, {{dateTime | date:'MMM d'}}</p>
+                                <p class="status" style="line-height: 0;"><b><img src="https://openweathermap.org/img/wn/{{icon4}}@2x.png" width="30%" height="30%"></b> {{description4}}</p>
+                            </div>
+                            <div class="col-md-6 temperature1">
+                                <h1 class="temp"> {{temperature4}}°C </h1>
+                                <p class="min-temp mb-0">Temp Min: {{min_temp4}}°C</p>
+                                <p class="max-temp mb-0">Temp Max: {{max_temp4}}°C</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-ft">
+                        <div class="row">
+                            <div class="col-md-4  border-secondary sec1">
+                                <div class="ft justify-content-center align-items-center">
+                                    <p class="mb-1">Pressure: {{pressure4}}hPa</p>
+                                    <p class="mb-1">Humidity: {{humidity4}}%</p>
+                                    <p class="mb-1">Visibility: {{visibility4}}km</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4  border-secondary sec2">
+                                <div class="ft justify-content-center align-items-center">
+                                    <div class="container">
+                                        <div class="row justify-content-center align-items-center">
+                                            <div class="col-auto">
+                                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46.64 46.64" width="25" height="25" class="p-100">
+                                                    <defs>
+                                                    <style>.cls-1{fill:#fff;}</style>
+                                                    </defs>
+                                                    <title>arrow head</title>
+                                                    <path class="cls-1" d="M24.76,45.64l-.37,0A3.33,3.33,0,0,1,21.46,43L18.13,28.48,3.59,25.15a3.37,3.37,0,0,1-.66-6.35L40.87,1.26a3.37,3.37,0,0,1,4.48,4.48L27.81,43.68A3.32,3.32,0,0,1,24.76,45.64Zm-19-23.92,13.5,3.09a3.39,3.39,0,0,1,2.54,2.54l3.09,13.5L41.35,5.26Zm36.72-17h0Z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="mb-0">{{speed4}}m/s {{degree4}} Degree</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 sec3">
+                                <div class="ft justify-content-center align-items-center">
+                                    <p class="mb-1">Sunrise: {{sunrise4 | date:'H:mm'}}</p>
+                                    <p class="mb-1">Sunset: {{sunset4 | date:'H:mm'}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- End of the Row-2 -->
+        <br>
+
+        <!-- Start of the Row-3 -->
+        <div class="row custom-padding">
+
+            <!-- Card-5 -->
+            <div class="col-md-6">
+                <div class="card custom-bg-card shadow-sm bg-dark rounded text-white">
+                    <div class="card-header shadow-sm close5">
+                        <button type="button" class="close" data-dismiss="card" aria-label="Close" style="color: white;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <a routerLink="/fiveth" class="card-link text-decoration-none">
+                    <div class="card-body5 text-white">
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <h6 class="city-name"> {{name5}} , {{country5}} </h6>
+                                <p class="time">{{dateTime | date: 'HH:mm'}}, {{dateTime | date:'MMM d'}}</p>
+                                <p class="status" style="line-height: 0;"><b><img src="https://openweathermap.org/img/wn/{{icon5}}@2x.png" width="30%" height="30%"></b> {{description5}}</p>
+                            </div>
+                            <div class="col-md-6 temperature1">
+                                <h1 class="temp"> {{temperature5}}°C </h1>
+                                <p class="min-temp mb-0">Temp Min: {{min_temp5}}°C</p>
+                                <p class="max-temp mb-0">Temp Max: {{max_temp5}}°C</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-ft">
+                        <div class="row">
+                            <div class="col-md-4  border-secondary sec1">
+                                <div class="ft justify-content-center align-items-center">
+                                    <p class="mb-1">Pressure: {{pressure5}}hPa</p>
+                                    <p class="mb-1">Humidity: {{humidity5}}%</p>
+                                    <p class="mb-1">Visibility: {{visibility5}}km</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4  border-secondary sec2">
+                                <div class="ft justify-content-center align-items-center">
+                                    <div class="container">
+                                        <div class="row justify-content-center align-items-center">
+                                            <div class="col-auto">
+                                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46.64 46.64" width="25" height="25" class="p-100">
+                                                    <defs>
+                                                    <style>.cls-1{fill:#fff;}</style>
+                                                    </defs>
+                                                    <title>arrow head</title>
+                                                    <path class="cls-1" d="M24.76,45.64l-.37,0A3.33,3.33,0,0,1,21.46,43L18.13,28.48,3.59,25.15a3.37,3.37,0,0,1-.66-6.35L40.87,1.26a3.37,3.37,0,0,1,4.48,4.48L27.81,43.68A3.32,3.32,0,0,1,24.76,45.64Zm-19-23.92,13.5,3.09a3.39,3.39,0,0,1,2.54,2.54l3.09,13.5L41.35,5.26Zm36.72-17h0Z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="mb-0"> {{speed5}}m/s {{degree5}} Degree</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 sec3">
+                                <div class="ft justify-content-center align-items-center">
+                                    <p class="mb-1">Sunrise: {{sunrise5 | date:'H:mm'}}</p>
+                                    <p class="mb-1">Sunset: {{sunset5 | date:'H:mm'}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card-6 -->
+            <div class="col-md-6">
+                <div class="card custom-bg-card shadow-sm bg-dark rounded text-white">
+                    <div class="card-header shadow-sm close6">
+                        <button type="button" class="close" data-dismiss="card" aria-label="Close" style="color: white;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <a routerLink="/six" class="card-link text-decoration-none">
+                    <div class="card-body6 text-white">
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <h6 class="city-name"> {{name6}} , {{country6}} </h6>
+                                <p class="time">{{dateTime | date: 'HH:mm'}}, {{dateTime | date:'MMM d'}}</p>
+                                <p class="status" style="line-height: 0;"><b><img src="https://openweathermap.org/img/wn/{{icon6}}@2x.png" width="30%" height="30%"></b> {{description6}}</p>
+                            </div>
+                            <div class="col-md-6 temperature1">
+                                <h1 class="temp"> {{temperature6}}°C </h1>
+                                <p class="min-temp mb-0">Temp Min: {{min_temp6}}°C</p>
+                                <p class="max-temp mb-0">Temp Max: {{max_temp6}}°C</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-ft">
+                        <div class="row">
+                            <div class="col-md-4  border-secondary sec1">
+                                <div class="ft justify-content-center align-items-center">
+                                    <p class="mb-1">Pressure: {{pressure6}}hPa</p>
+                                    <p class="mb-1">Humidity: {{humidity6}}%</p>
+                                    <p class="mb-1">Visibility: {{visibility6}}km</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4  border-secondary sec2">
+                                <div class="ft justify-content-center align-items-center">
+                                    <div class="container">
+                                        <div class="row justify-content-center align-items-center">
+                                            <div class="col-auto">
+                                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46.64 46.64" width="25" height="25" class="p-100">
+                                                    <defs>
+                                                    <style>.cls-1{fill:#fff;}</style>
+                                                    </defs>
+                                                    <title>arrow head</title>
+                                                    <path class="cls-1" d="M24.76,45.64l-.37,0A3.33,3.33,0,0,1,21.46,43L18.13,28.48,3.59,25.15a3.37,3.37,0,0,1-.66-6.35L40.87,1.26a3.37,3.37,0,0,1,4.48,4.48L27.81,43.68A3.32,3.32,0,0,1,24.76,45.64Zm-19-23.92,13.5,3.09a3.39,3.39,0,0,1,2.54,2.54l3.09,13.5L41.35,5.26Zm36.72-17h0Z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="mb-0"> {{speed6}}m/s {{degree6}} Degree</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 sec3">
+                                <div class="ft justify-content-center align-items-center">
+                                    <p class="mb-1">Sunrise: {{sunrise6 | date:'H:mm'}}</p>
+                                    <p class="mb-1">Sunset: {{sunset6 | date:'H:mm'}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- End of the Row-3 -->
+        <br>
+
+        <!-- Start of the Row-4 -->
+        <div class="row custom-padding">
+
+            <!-- Card-7 -->
+            <div class="col-md-6">
+                <div class="card custom-bg-card bg-dark text-white">
+                    <div class="card-header close7">
+                        <button type="button" class="close" data-dismiss="card" aria-label="Close" style="color: white;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <a routerLink="/seven" class="text-decoration-none">
+                    <div class="card-body7 text-white">
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <h6 class="city-name pt-0">{{name7}} , {{country7}}</h6>
+                                <p class="time">{{dateTime | date: 'HH:mm'}}, {{dateTime | date:'MMM d'}}</p>
+                                <p class="status" style="line-height: 0;"><b><img src="https://openweathermap.org/img/wn/{{icon7}}@2x.png" width="30%" height="30%"></b> {{description7}}</p>
+                            </div>
+                            <div class="col-md-6 temperature1">
+                                <h1 class="temp"> {{temperature7}}°C </h1>
+                                <p class="min-temp mb-0">Temp Min: {{min_temp7}}°C</p>
+                                <p class="max-temp mb-0">Temp Max: {{max_temp7}}°C</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-ft">
+                        <div class="row">
+                            <div class="col-md-4 border-secondary sec1">
+                                <div class="ft justify-content-center align-items-center">
+                                    <p class="mb-1">Pressure: {{pressure7}}hPa</p>
+                                    <p class="mb-1">Humidity: {{humidity7}}%</p>
+                                    <p class="mb-1">Visibility: {{visibility7}}km</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 border-secondary sec2">
+                                <div class="ft justify-content-center align-items-center">
+                                    <div class="container">
+                                        <div class="row justify-content-center align-items-center">
+                                            <div class="col-auto">
+                                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46.64 46.64" width="25" height="25" class="p-100">
+                                                    <defs>
+                                                    <style>.cls-1{fill:#fff;}</style>
+                                                    </defs>
+                                                    <title>arrow head</title>
+                                                    <path class="cls-1" d="M24.76,45.64l-.37,0A3.33,3.33,0,0,1,21.46,43L18.13,28.48,3.59,25.15a3.37,3.37,0,0,1-.66-6.35L40.87,1.26a3.37,3.37,0,0,1,4.48,4.48L27.81,43.68A3.32,3.32,0,0,1,24.76,45.64Zm-19-23.92,13.5,3.09a3.39,3.39,0,0,1,2.54,2.54l3.09,13.5L41.35,5.26Zm36.72-17h0Z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="mb-0">{{speed7}}m/s {{degree7}} Degree</p>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-4 sec3">
+                                <div class="ft justify-content-center align-items-center">
+                                    <p class="mb-1">Sunrise: {{sunrise7 | date:'H:mm'}}</p>
+                                    <p class="mb-1">Sunset: {{sunset7 | date:'H:mm'}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card-8 -->
+            <div class="col-md-6">
+                <div class="card custom-bg-card shadow-sm bg-dark rounded text-white">
+                    <div class="card-header shadow-sm close8">
+                        <button type="button" class="close" data-dismiss="card" aria-label="Close" style="color: white;">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <a routerLink="/eight" class="card-link text-decoration-none" >
+                    <div class="card-body8 text-white">
+                        <div class="row">
+                            <div class="col-md-6 text-center">
+                                <h6 class="city-name"> {{name8}} , {{country8}} </h6>
+                                <p class="time">{{dateTime | date: 'HH:mm'}}, {{dateTime | date:'MMM d'}}</p>
+                                <p class="status" style="line-height: 0;"><b><img src="https://openweathermap.org/img/wn/{{icon8}}@2x.png" width="30%" height="30%"></b> {{description8}}</p>
+                            </div>
+                            <div class="col-md-6 temperature1">
+                                <h1 class="temp"> {{temperature8}}°C </h1>
+                                <p class="min-temp mb-0">Temp Min: {{min_temp8}}°C</p>
+                                <p class="max-temp mb-0">Temp Max: {{max_temp8}}°C</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-ft">
+                        <div class="row">
+                            <div class="col-md-4  border-secondary sec1">
+                                <div class="ft  justify-content-center align-items-center">
+                                    <p class="mb-1">Pressure: {{pressure8}}hPa</p>
+                                    <p class="mb-1">Humidity: {{humidity8}}%</p>
+                                    <p class="mb-1">Visibility: {{visibility8}}km</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4  border-secondary sec2">
+                                <div class="ft justify-content-center align-items-center">
+                                    <div class="container">
+                                        <div class="row justify-content-center align-items-center">
+                                            <div class="col-auto">
+                                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46.64 46.64" width="25" height="25" class="p-100">
+                                                    <defs>
+                                                    <style>.cls-1{fill:#fff;}</style>
+                                                    </defs>
+                                                    <title>arrow head</title>
+                                                    <path class="cls-1" d="M24.76,45.64l-.37,0A3.33,3.33,0,0,1,21.46,43L18.13,28.48,3.59,25.15a3.37,3.37,0,0,1-.66-6.35L40.87,1.26a3.37,3.37,0,0,1,4.48,4.48L27.81,43.68A3.32,3.32,0,0,1,24.76,45.64Zm-19-23.92,13.5,3.09a3.39,3.39,0,0,1,2.54,2.54l3.09,13.5L41.35,5.26Zm36.72-17h0Z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="mb-1">{{speed8}}m/s {{degree8}} Degree</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 sec3">
+                                <div class="ft justify-content-center align-items-center">
+                                    <p class="mb-1">Sunrise: {{sunrise8 | date:'H:mm'}}</p>
+                                    <p class="mb-1">Sunset: {{sunset8 | date:'H:mm'}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- End of the Row-4 -->
+        <br>
+    
+    </div>
+    <br>
+
+    <!-- Start of the Footer -->
+    <footer class="footer py-3">
+        <div class="container text-center" style="color: gray;">
+            <span>2021 Fidenz Technologies</span>
+        </div>
+    </footer>
+    <!-- End of the Footer -->
+</div>

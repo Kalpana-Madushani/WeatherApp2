@@ -1,0 +1,86 @@
+
+
+<div class="bg">
+    <div class="container">
+        <div class="text">
+            <h2><img src="../assets/sun and cloud.png" alt="" width="5%" height="5%"> Weather App</h2>
+        </div>
+
+        <div class="row custom-padding">
+            <div class="col-md-12">
+                <div class="card custom-bg-card shadow-sm bg-dark text-white">
+                    <div class="body4 pb-2">
+                        <a routerLink="/weather" class="btn btn-link text-decoration-none btn-lg text-white custom-link">
+                            <span class="material-icons">
+                                arrow_back
+                            </span>
+                        </a>
+                    <div class="container text-center">
+                        <h4 class="city-name"> {{name4}} , {{country4}} </h4>
+                        <p class="time">{{dateTime | date: 'HH:mm'}}, {{dateTime | date:'MMM d'}}</p>
+                    </div>
+                    <br>
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-3 border-right border-s" style="text-align: center;">
+                                <div class="container">
+                                    <img src="https://openweathermap.org/img/wn/{{icon4}}@2x.png" width="30%" height="30%">
+                                </div>
+                                <p class="status">{{description4}}</p>
+                            </div>
+                            <div class="col-md-3 temperature">
+                                <h1 class="temp"> {{temperature4}}°C </h1>
+                                <p class="min-temp mb-0">Temp Min: {{min_temp4}}°C</p>
+                                <p class="max-temp mb-0">Temp Max: {{max_temp4}}°C</p>
+                            </div>
+                            <div class="col-md-3"></div>
+                        </div>
+                        <br>
+                    </div>
+                    <div class="card-ft1" style="padding: 10px;">
+                        <div class="row pt-4 pb-4">
+                            <div class="col-md-4 border-right border-secondary section1">
+                                <div class="ft1 justify-content-center text-right">
+                                    <p class="mb-0 pr-4">Pressure: {{pressure4}}hPa</p>
+                                    <p class="mb-0 pr-4">Humidity: {{humidity4}}%</p>
+                                    <p class="mb-0 pr-4">Visibility: {{visibility4}}km</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 border-right border-secondary section2">
+                                <div class="ft1 justify-content-center text-center">
+                                    <div class="container">
+                                        <div class="row justify-content-center align-items-center">
+                                            <div class="col-auto">
+                                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 46.64 46.64" width="40" height="40">
+                                                    <defs>
+                                                    <style>.cls-1{fill:#fff;}</style>
+                                                    </defs>
+                                                    <title>arrow head</title>
+                                                    <path class="cls-1" d="M24.76,45.64l-.37,0A3.33,3.33,0,0,1,21.46,43L18.13,28.48,3.59,25.15a3.37,3.37,0,0,1-.66-6.35L40.87,1.26a3.37,3.37,0,0,1,4.48,4.48L27.81,43.68A3.32,3.32,0,0,1,24.76,45.64Zm-19-23.92,13.5,3.09a3.39,3.39,0,0,1,2.54,2.54l3.09,13.5L41.35,5.26Zm36.72-17h0Z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="mb-0">{{speed4}}m/s {{degree4}} Degree</p>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-4 section3">
+                                <div class="ft1">
+                                    <p class="mb-0 pl-4">Sunrise: {{sunrise4 | date:'H:mm'}}</p>
+                                    <p class="mb-0 pl-4">Sunset: {{sunset4 | date:'H:mm'}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <footer class="footer py-3">
+      <div class="container text-center" style="color: gray;">
+        <span>2021 Fidenz Technologies</span>
+      </div>
+    </footer>
+</div>
